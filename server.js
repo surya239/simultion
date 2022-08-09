@@ -17,13 +17,14 @@ const projectDuration = 5
 const teamLeadRatio = ['1-5', '1-7', '1-10', '1-12']
 const pmSalary = [3500, 3600, 3700]
 app.use(express.json())
-
+console.log(path.resolve())
 // const __dirname = path.resolve();
-app.get("/", (req, res) => {
-    res.sendFile(path.join(path.resolve(), 'index.html'));
-} )
-app.use(express.static(path.join(path.resolve(),"project/build")))
 
+// app.use(express.static(path.join(path.resolve(),"project/build")))
+app.get("*", (req, res) => {
+    // res.sendFile(path.join(path.resolve(), 'project/build/index.html'));
+    res.send("Hello")
+} )
 // app.post('/sign', async(req,res) => {
 //     try {
 //         const {username, email, password} = req.body
