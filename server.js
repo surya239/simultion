@@ -696,7 +696,7 @@ app.get('/summary', async(req, res) => {
         console.log(error)
     }
 })
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.join(path.resolve(), 'client/build/index.html'));
 } )
 app.listen(PORT, () =>{

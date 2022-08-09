@@ -6,13 +6,8 @@ import Bid from './Pages/Bid'
 function App() {
   return (
    <>
-    <Router>
-      <Routes>
-        {/* <Route exact path="/" element ={<Login />}></Route> */}
-        {/* <Route path="/Signup" element={<Signup />}></Route> */}
-        <Route path="/" element={<Bid />}></Route>
-      </Routes>
-    </Router>
+    
+    <h1> Hello</h1>
    </>
   );
 }
