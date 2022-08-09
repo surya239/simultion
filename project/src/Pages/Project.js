@@ -43,14 +43,14 @@ function Project(){
             setNoOfTeamLeads((await result).data[3])
             setCostOfMonths((await result).data[4])
              dataArray = []
-            for(var i = 0; i<(await result).data[5].length; i++){
+            for( i = 0; i<(await result).data[5].length; i++){
                 dataArray[i] = {id: i, label: (await result).data[5][i], value: (await result).data[5][i]}
             }
             
             setTeamLeadSalary(dataArray)
             setDefaultTeamLeadSalary((await result).data[6])
             dataArray = []
-            for(var i = 0; i<(await result).data[8].length; i++){
+            for( i = 0; i<(await result).data[8].length; i++){
                 dataArray[i] = {id: i, label: (await result).data[8][i], value: (await result).data[8][i]}
             }
             setteamLeadRatio(dataArray)
@@ -59,12 +59,12 @@ function Project(){
             setprojectManagerCost((await result).data[10])
             setDefaultTeamLeadRatio((await result).data[11])
             dataArray = []
-            for(var i = 0; i<(await result).data[12].length; i++){
+            for( i = 0; i<(await result).data[12].length; i++){
                 dataArray[i] = {id: i, label: (await result).data[12][i], value: (await result).data[12][i]}
             }
             setPmSalary(dataArray)
             dataArray = []
-            for(var i = 0; i<(await result).data[14].length; i++){
+            for( i = 0; i<(await result).data[14].length; i++){
                 dataArray[i] = {id: i, label: String((await result).data[14][i]) + ' %', value:String( (await result).data[14][i]) + ' %'}
             }
             setDefaultPmSAlary((await result).data[13])
@@ -72,7 +72,7 @@ function Project(){
             setdefaultHeuristic(String((await result).data[15])+ ' %')
             setCostHeuristic((await result).data[16])
             dataArray = []
-            for(var i = 0; i<(await result).data[17].length; i++){
+            for( i = 0; i<(await result).data[17].length; i++){
                 dataArray[i] = {id: i, label: (await result).data[17][i], value: (await result).data[17][i]}
             }
             setOnsite(dataArray)
@@ -80,7 +80,7 @@ function Project(){
             setOnSite((await result).data[19])
             setMaxValue((await result).data[20])
             dataArray = []
-            for(var i = 0; i<(await result).data[21].length; i++){
+            for( i = 0; i<(await result).data[21].length; i++){
                 dataArray[i] = {id: i, label: (await result).data[21][i], value: (await result).data[21][i]}
             }
             setOnsiteSalary(dataArray)
@@ -170,7 +170,7 @@ function Project(){
                             <td>Onsite Coordinator Cost for 5 Months </td>
                         </tr>
                         <tr>
-                            <td>{defaultonsite === ''?null:<Select options={onsite} defaultValue={{id:1, label: defaultonsite, id: defaultonsite}} />}</td>
+                            <td>{defaultonsite === ''?null:<Select options={onsite} defaultValue={{id:1, label: defaultonsite, value: defaultonsite}} />}</td>
                             <td>{onSite}</td>
                             <td>{maxValue / onSite}</td>
                             <td>{Math.round(onsiteCost * (maxValue / onSite) )}</td>
