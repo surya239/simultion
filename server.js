@@ -19,8 +19,8 @@ const pmSalary = [3500, 3600, 3700]
 app.use(express.json())
 
 // const __dirname = path.resolve();
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname,"project/build")))
+
+app.use(express.static(path.join(path.resolve(),"project/build")))
 
 app.post('/sign', async(req,res) => {
     try {
