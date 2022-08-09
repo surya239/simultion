@@ -20,7 +20,7 @@ app.use(express.json())
 
 // const __dirname = path.resolve();
 
-app.use(express.static(path.join(path.resolve(),"project/build")))
+// app.use(express.static(path.join(path.resolve(),"project/build")))
 
 app.post('/sign', async(req,res) => {
     try {
@@ -696,8 +696,8 @@ app.get('/summary', async(req, res) => {
         console.log(error)
     }
 })
-app.get("*", (req, res) => {
-    res.sendFile(path.join(path.resolve(), 'project/build/index.html'));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(path.resolve(), 'index.html'));
 } )
 app.listen(PORT, () =>{
     console.log("App Listening in ", PORT)
